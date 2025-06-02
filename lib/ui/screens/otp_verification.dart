@@ -132,7 +132,7 @@ class _OTPVerificationScreenState extends State<OTPVerificationScreen> {
     final NetworkResponse response = await NetworkClient.getRequest(
       url: Urls.otpVerify(widget.email, _pinCodeTEController.text),
     );
-    _otpVerifyInProgress = true;
+    _otpVerifyInProgress = false;
     setState(() {});
     if (response.isSuccess) {
       Navigator.push(
